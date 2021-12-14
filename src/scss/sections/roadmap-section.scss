@@ -1,0 +1,99 @@
+.roadmap-section {
+  background-image: url("../images/bg.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+
+  .section-wrap {
+    max-width: 65.3rem;
+    width: 100%;
+    margin-bottom: 5rem;
+    @include media(">=desktop") {
+      margin-bottom: 10.7rem;
+    }
+  }
+
+  .section-title {
+    background: linear-gradient(90deg, rgb(126, 76, 32), rgb(248, 237, 201) 16%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.roadmap {
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__col {
+    position: relative;
+    max-width: 70.3rem;
+    width: 100%;
+    padding-left: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+    border-left: 1px solid #372518;
+    @include media(">=desktop") {
+      border-width: 3px;
+    }
+    &:last-child {
+      border: none;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 34.5rem;
+      height: 1.2rem;
+      background-image: url("../images/video-top.webp");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  &__numb {
+    position: absolute;
+    top: 0;
+    left: -1.5rem;
+    color: $black;
+    z-index: 1;
+    font-size: 3.2rem;
+    line-height: 1;
+
+    @include media(">=desktop") {
+      left: -1.6rem;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background: linear-gradient(95.02deg, #7e4c20 0%, #f8edc9 79.27%);
+      width: 4.5rem;
+      height: 4.5rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: 400;
+    background: linear-gradient(90deg, rgb(126, 76, 32), rgb(248, 237, 201) 16%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+  }
+}

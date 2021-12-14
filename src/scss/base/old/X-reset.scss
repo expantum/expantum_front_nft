@@ -1,0 +1,109 @@
+// This is base reset for global components.
+//
+// Note: If you use a framework that includes base styling then you need to remove this file.
+
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+  @include font-smoothing(on);
+  color: map-get($base, 'base-text-color');
+  background: map-get($base, 'base-background-color');
+  font: #{map-get($base, 'base-font-size')}/#{map-get($base, 'base-line-height')} #{map-get($base, 'base-font-family')};
+  min-width: map-get($base, base-min-width);
+}
+
+// adaptive images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// google map fix
+.gm-style img {max-width: none;}
+
+// hide tel links on desktop
+@media only screen and (min-width: 1025px) {
+    a[href^="tel"], a[href^="skype"], a[href^="sms"] {
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+em,
+img,
+strong,
+sub,
+sup,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+button {
+  transition: map-get($base, 'base-transition');
+  background-color: transparent;
+  outline: none;
+  appearance: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}

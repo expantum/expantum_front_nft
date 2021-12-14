@@ -1,0 +1,18 @@
+
+// When using the script 'burger-menu' add class overflow
+body {
+  &.overflow {
+    overflow: hidden;
+  }
+}
+
+// Slides became the same height
+.swiper-container-initialized {
+  height: 100%;
+}
+.swiper-slide {
+  height: auto;
+  &>* {
+    height: 100%;
+  }
+}

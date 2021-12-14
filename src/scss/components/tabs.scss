@@ -1,0 +1,38 @@
+.tabs {
+  &__header {
+    display: flex;
+  }
+
+  &__btn {
+    color: #000;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    transition: $base-transition;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ccc;
+    }
+
+    & + & {
+      margin-left: 10px;
+    }
+
+    &.active {
+      background-color: #ccc;
+    }
+  }
+
+  &__content {
+    display: none;
+    padding: 16px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+
+    &.active {
+      display: block;
+    }
+  }
+}

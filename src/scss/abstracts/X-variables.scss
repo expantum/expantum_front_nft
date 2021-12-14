@@ -1,0 +1,108 @@
+// Global variables
+//
+// Base font styles for headings and links.
+
+// For headers
+$headings: (
+  'sizes': (
+    'h1-font-size': 30px,
+    'h2-font-size': 27px,
+    'h3-font-size': 24px,
+    'h4-font-size': 21px,
+    'h5-font-size': 17px,
+    'h6-font-size': 15px
+  ),
+  'fonts': (
+    'headings-font-family': inherit,
+    'headings-color': inherit
+  )
+);
+
+// Global vars for body typography
+$base: (
+  'base-font-sans-serif': unquote("Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+  'base-font-serif': unquote("'Times New Roman', Times, Baskerville, Georgia, serif"),
+  'base-font-family': unquote("Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+  'base-transition': all 0.3s ease,
+  'base-border-radius': 5px,
+  'base-min-width': 320px
+);
+
+//font-size vars
+$text: (
+  'extra-small-font': 10px,
+  'small-font-size': 14px,
+  'menu-font-size': 15px,
+  'base-font-size': 16px,
+  'semi-font-size': 18px,
+  'big-font-size': 20px,
+
+  'base-lh': 1.2,
+  'secondary-lh': 1.4,
+  'tertiary-lh': 1.6,
+
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'semi-bold': 600,
+  'bold': 700,
+  'extra-bold': 800,
+  'black': 900,
+);
+
+//colors vars
+$color: (
+  'white': #FFFFFF,
+  'black': #000000,
+  'primary': #333333,
+  // 'secondary': #111111,
+  // 'tertiary': #313131,
+  // 'base-text': #334433,
+  // 'secondary-text': #111133,
+  // 'primary-bg': #343a40,
+  // 'secondary-bg': #343a40,
+  // 'dark': #343b40,
+  // 'light': #343b40,
+  // 'base-btn': #3040C4,
+  // 'success': #28A745,
+  // 'warning': #FFC117,
+  'error': #DC3545,
+);
+
+//box-shadow vars
+$box-shadow: (
+  'base-shadow': 0px 12px 24px rgba(35, 25, 86, 0.1)
+);
+
+// Vars for forms
+$forms: (
+  'form-font-family': unquote("Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+  'form-element-padding': unquote("0.4em 0.7em"),
+  'form-element-border-color': #999,
+  'form-element-focus-border-color': #000,
+  'placeholder-color': #999
+);
+
+// Breakpoints for include media mixin
+$breakpoints: (
+  'phone': 480px,
+  'phone-lg': 576px, 
+  'tablet': 768px,
+  'tablet-lg': 992px,
+  'desktop': 1024px,
+  'widescreen': 1200px,
+  'widescreen-md': 1360px,
+  'widescreen-lg': 1440px,
+  'full-hd': 1920px,
+);
+
+// Keywords for include media mixin
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);

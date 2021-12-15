@@ -1,29 +1,29 @@
 .footer {
-  padding: 3rem 0;
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
+    padding: 3rem 0;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
 
-  .soc {
-    margin: 0 auto 2.1rem;
-  }
+    .soc {
+        margin: 0 auto 2.1rem;
+    }
 
-  .logo {
-    width: 18rem;
-    margin-bottom: 2rem;
-  }
+    .logo {
+        width: 18rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .copyright {
-  .copyright-text {
-    font-size: 2rem;
-    line-height: 1.06;
-    color: rgba(255, 255, 255, 0.5);
-    @include media(">=desktop") {
-      font-size: 1.7rem;
+    .copyright-text {
+        font-size: 2rem;
+        line-height: 1.06;
+        color: rgba(255, 255, 255, 0.5);
+        @include media('>=desktop') {
+            font-size: 1.7rem;
+        }
     }
-  }
 }

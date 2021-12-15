@@ -1,53 +1,50 @@
 // const ACTIVE = 'active';
 const NAV_LINKS = document.querySelectorAll('.js-link-to');
 
-
 const scrollTo = (() => {
+    const initScroll = () => {
+        if (!NAV_LINKS.length) return;
 
-  const initScroll = () => {
+        NAV_LINKS.forEach((link) => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
 
-    if(!NAV_LINKS.length) return;
+                const href = e.currentTarget.getAttribute('href').substring(1);
 
-    NAV_LINKS.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
+                top(href);
+            });
+        });
+    };
 
-        const href = e.currentTarget.getAttribute('href').substring(1);
-        
-        top(href);
-      })
-    });
-  };
+    const top = (id) => {
+        const scrollTarget = document.getElementById(id);
 
-  const top = (id) => {
-    const scrollTarget = document.getElementById(id);
+        if (!scrollTarget) return;
 
-    if(!scrollTarget) return;
+        let topOffset = 0;
+        const fixHeader = document.querySelector('.js-fixed-header');
 
-    let topOffset = 0;
-    const fixHeader = document.querySelector('.js-fixed-header');
+        if (fixHeader) {
+            topOffset = fixHeader.offsetHeight;
+        }
 
-    if(fixHeader) {
-      topOffset = fixHeader.offsetHeight;
-    }
+        const elementPosition = scrollTarget.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - topOffset;
 
-    const elementPosition = scrollTarget.getBoundingClientRect().top;
-    const offsetPosition = elementPosition - topOffset;
+        window.scrollBy({
+            top: offsetPosition,
+            behavior: 'smooth',
+        });
+    };
 
-    window.scrollBy({
-        top: offsetPosition,
-        behavior: 'smooth'
-    });
-  };
+    const init = () => {
+        initScroll();
+    };
 
-  const init = () => {
-    initScroll();
-  };
-
-  return {
-    init,
-    top
-  };
+    return {
+        init,
+        top,
+    };
 })();
 
 export default scrollTo;

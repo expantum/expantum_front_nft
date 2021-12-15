@@ -3,22 +3,22 @@
 // You can remove or add your own helpers in this file.
 
 %listreset {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 // clearfix
 %clearfix {
-  &:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
 }
 
 .clearfix {
-  @extend %clearfix;
+    @extend %clearfix;
 }
 
 // Only display content to screen readers
@@ -26,14 +26,14 @@
 // See: http://a11yproject.com/posts/how-to-hide-content/
 
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 // Use in conjunction with .sr-only to only display content when it's focused.
@@ -41,16 +41,15 @@
 // Credit: HTML5 Boilerplate
 
 .sr-only-focusable {
-
-  &:active,
-  &:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-  }
+    &:active,
+    &:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+    }
 }
 
 /// * Helper class to truncate and add ellipsis to a string too long for it to fit
@@ -59,460 +58,460 @@
 /// * 2. Add ellipsis at the end of the line.
 
 .ellipsis {
-  white-space: nowrap; // 1
-  text-overflow: ellipsis; // 2
-  overflow: hidden;
+    white-space: nowrap; // 1
+    text-overflow: ellipsis; // 2
+    overflow: hidden;
 }
 
 // bg styles
 %base-bg-style {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 // flex
 %d-flex-wrap {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 %d-flex-row {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 %d-flex-row-reverse {
-  display: flex;
-  flex-direction: row-reverse;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 %d-flex-column {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 %d-flex-column-reverse {
-  display: flex;
-  flex-direction: column-reverse;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 // d-flex + align-items
 %d-flex-align-start {
-  display: flex;
-  align-items: flex-start;
+    display: flex;
+    align-items: flex-start;
 }
 
 %d-flex-align-center {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 %d-flex-align-end {
-  display: flex;
-  align-items: flex-end;
+    display: flex;
+    align-items: flex-end;
 }
 
 // d-flex + justify-content
 %d-flex-justify-start {
-  display: flex;
-  justify-content: flex-start;
+    display: flex;
+    justify-content: flex-start;
 }
 
 %d-flex-justify-center {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 %d-flex-justify-end {
-  display: flex;
-  justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
 
 %d-flex-justify-around {
-  display: flex;
-  justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 }
 
 %d-flex-justify-between {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 // d-flex + align-items + justify-content
 %d-flex-center-start {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 %d-flex-center-center {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 %d-flex-center-end {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 %d-flex-center-around {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 }
 
 %d-flex-center-between {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
 %d-flex-start-start {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 // d-flex + flex-direction + align-items
 %d-flex-column-start {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 %d-flex-column-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 %d-flex-column-end {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 // d-flex + flex-direction + align-items + justify
 %d-flex-column-start-between {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 %d-flex-column-center-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Margin */
 @mixin margin-helper($level, $spacing) {
-  .m-#{$level} {
-    margin: #{$spacing} !important;
-  }
+    .m-#{$level} {
+        margin: #{$spacing} !important;
+    }
 
-  .mx-#{$level} {
-    margin-left: #{$spacing} !important;
-    margin-right: #{$spacing} !important;
-  }
+    .mx-#{$level} {
+        margin-left: #{$spacing} !important;
+        margin-right: #{$spacing} !important;
+    }
 
-  .my-#{$level} {
-    margin-top: #{$spacing} !important;
-    margin-bottom: #{$spacing} !important;
-  }
+    .my-#{$level} {
+        margin-top: #{$spacing} !important;
+        margin-bottom: #{$spacing} !important;
+    }
 
-  .mt-#{$level} {
-    margin-top: #{$spacing} !important;
-  }
+    .mt-#{$level} {
+        margin-top: #{$spacing} !important;
+    }
 
-  .mb-#{$level} {
-    margin-bottom: #{$spacing} !important;
-  }
+    .mb-#{$level} {
+        margin-bottom: #{$spacing} !important;
+    }
 
-  .ml-#{$level} {
-    margin-left: #{$spacing} !important;
-  }
+    .ml-#{$level} {
+        margin-left: #{$spacing} !important;
+    }
 
-  .mr-#{$level} {
-    margin-right: #{$spacing} !important;
-  }
+    .mr-#{$level} {
+        margin-right: #{$spacing} !important;
+    }
 }
 
 @mixin margin-helper-tablet($level, $spacing) {
-  @include media(">=tablet") {
-    .m-tb-#{$level} {
-      margin: #{$spacing} !important;
-    }
+    @include media('>=tablet') {
+        .m-tb-#{$level} {
+            margin: #{$spacing} !important;
+        }
 
-    .mx-tb-#{$level} {
-      margin-left: #{$spacing} !important;
-      margin-right: #{$spacing} !important;
-    }
+        .mx-tb-#{$level} {
+            margin-left: #{$spacing} !important;
+            margin-right: #{$spacing} !important;
+        }
 
-    .my-tb-#{$level} {
-      margin-top: #{$spacing} !important;
-      margin-bottom: #{$spacing} !important;
-    }
+        .my-tb-#{$level} {
+            margin-top: #{$spacing} !important;
+            margin-bottom: #{$spacing} !important;
+        }
 
-    .mt-tb-#{$level} {
-      margin-top: #{$spacing} !important;
-    }
+        .mt-tb-#{$level} {
+            margin-top: #{$spacing} !important;
+        }
 
-    .mb-tb-#{$level} {
-      margin-bottom: #{$spacing} !important;
-    }
+        .mb-tb-#{$level} {
+            margin-bottom: #{$spacing} !important;
+        }
 
-    .ml-tb-#{$level} {
-      margin-left: #{$spacing} !important;
-    }
+        .ml-tb-#{$level} {
+            margin-left: #{$spacing} !important;
+        }
 
-    .mr-tb-#{$level} {
-      margin-right: #{$spacing} !important;
+        .mr-tb-#{$level} {
+            margin-right: #{$spacing} !important;
+        }
     }
-  }
 }
 
 @mixin margin-helper-desktop($level, $spacing) {
-  @include media(">=desktop") {
-    .m-wd-#{$level} {
-      margin: #{$spacing} !important;
-    }
+    @include media('>=desktop') {
+        .m-wd-#{$level} {
+            margin: #{$spacing} !important;
+        }
 
-    .mx-wd-#{$level} {
-      margin-left: #{$spacing} !important;
-      margin-right: #{$spacing} !important;
-    }
+        .mx-wd-#{$level} {
+            margin-left: #{$spacing} !important;
+            margin-right: #{$spacing} !important;
+        }
 
-    .my-wd-#{$level} {
-      margin-top: #{$spacing} !important;
-      margin-bottom: #{$spacing} !important;
-    }
+        .my-wd-#{$level} {
+            margin-top: #{$spacing} !important;
+            margin-bottom: #{$spacing} !important;
+        }
 
-    .mt-wd-#{$level} {
-      margin-top: #{$spacing} !important;
-    }
+        .mt-wd-#{$level} {
+            margin-top: #{$spacing} !important;
+        }
 
-    .mb-wd-#{$level} {
-      margin-bottom: #{$spacing} !important;
-    }
+        .mb-wd-#{$level} {
+            margin-bottom: #{$spacing} !important;
+        }
 
-    .ml-wd-#{$level} {
-      margin-left: #{$spacing} !important;
-    }
+        .ml-wd-#{$level} {
+            margin-left: #{$spacing} !important;
+        }
 
-    .mr-wd-#{$level} {
-      margin-right: #{$spacing} !important;
+        .mr-wd-#{$level} {
+            margin-right: #{$spacing} !important;
+        }
     }
-  }
 }
 
 @for $i from -200 through 200 {
-  @include margin-helper(#{$i}, #{$i * 2}px);
-  @include margin-helper-tablet(#{$i}, #{$i * 2}px);
-  @include margin-helper-desktop(#{$i}, #{$i * 2}px);
+    @include margin-helper(#{$i}, #{$i * 2}px);
+    @include margin-helper-tablet(#{$i}, #{$i * 2}px);
+    @include margin-helper-desktop(#{$i}, #{$i * 2}px);
 }
 
 // Padding
 @mixin padding-helper($level, $spacing) {
-  .p-#{$level} {
-    padding: #{$spacing} !important;
-  }
+    .p-#{$level} {
+        padding: #{$spacing} !important;
+    }
 
-  .px-#{$level} {
-    padding-left: #{$spacing} !important;
-    padding-right: #{$spacing} !important;
-  }
+    .px-#{$level} {
+        padding-left: #{$spacing} !important;
+        padding-right: #{$spacing} !important;
+    }
 
-  .py-#{$level} {
-    padding-top: #{$spacing} !important;
-    padding-bottom: #{$spacing} !important;
-  }
+    .py-#{$level} {
+        padding-top: #{$spacing} !important;
+        padding-bottom: #{$spacing} !important;
+    }
 
-  .pt-#{$level} {
-    padding-top: #{$spacing} !important;
-  }
+    .pt-#{$level} {
+        padding-top: #{$spacing} !important;
+    }
 
-  .pb-#{$level} {
-    padding-bottom: #{$spacing} !important;
-  }
+    .pb-#{$level} {
+        padding-bottom: #{$spacing} !important;
+    }
 
-  .pl-#{$level} {
-    padding-left: #{$spacing} !important;
-  }
+    .pl-#{$level} {
+        padding-left: #{$spacing} !important;
+    }
 
-  .pr-#{$level} {
-    padding-right: #{$spacing} !important;
-  }
+    .pr-#{$level} {
+        padding-right: #{$spacing} !important;
+    }
 }
 
 @mixin padding-helper-tablet($level, $spacing) {
-  @include media(">=tablet") {
-    .p-tb-#{$level} {
-      padding: #{$spacing} !important;
-    }
+    @include media('>=tablet') {
+        .p-tb-#{$level} {
+            padding: #{$spacing} !important;
+        }
 
-    .px-tb-#{$level} {
-      padding-left: #{$spacing} !important;
-      padding-right: #{$spacing} !important;
-    }
+        .px-tb-#{$level} {
+            padding-left: #{$spacing} !important;
+            padding-right: #{$spacing} !important;
+        }
 
-    .py-tb-#{$level} {
-      padding-top: #{$spacing} !important;
-      padding-bottom: #{$spacing} !important;
-    }
+        .py-tb-#{$level} {
+            padding-top: #{$spacing} !important;
+            padding-bottom: #{$spacing} !important;
+        }
 
-    .pt-tb-#{$level} {
-      padding-top: #{$spacing} !important;
-    }
+        .pt-tb-#{$level} {
+            padding-top: #{$spacing} !important;
+        }
 
-    .pb-tb-#{$level} {
-      padding-bottom: #{$spacing} !important;
-    }
+        .pb-tb-#{$level} {
+            padding-bottom: #{$spacing} !important;
+        }
 
-    .pl-tb-#{$level} {
-      padding-left: #{$spacing} !important;
-    }
+        .pl-tb-#{$level} {
+            padding-left: #{$spacing} !important;
+        }
 
-    .pr-tb-#{$level} {
-      padding-right: #{$spacing} !important;
+        .pr-tb-#{$level} {
+            padding-right: #{$spacing} !important;
+        }
     }
-  }
 }
 
 @mixin padding-helper-desktop($level, $spacing) {
-  @include media(">=desktop") {
-    .p-wd-#{$level} {
-      padding: #{$spacing} !important;
-    }
+    @include media('>=desktop') {
+        .p-wd-#{$level} {
+            padding: #{$spacing} !important;
+        }
 
-    .px-wd-#{$level} {
-      padding-left: #{$spacing} !important;
-      padding-right: #{$spacing} !important;
-    }
+        .px-wd-#{$level} {
+            padding-left: #{$spacing} !important;
+            padding-right: #{$spacing} !important;
+        }
 
-    .py-wd-#{$level} {
-      padding-top: #{$spacing} !important;
-      padding-bottom: #{$spacing} !important;
-    }
+        .py-wd-#{$level} {
+            padding-top: #{$spacing} !important;
+            padding-bottom: #{$spacing} !important;
+        }
 
-    .pt-wd-#{$level} {
-      padding-top: #{$spacing} !important;
-    }
+        .pt-wd-#{$level} {
+            padding-top: #{$spacing} !important;
+        }
 
-    .pb-wd-#{$level} {
-      padding-bottom: #{$spacing} !important;
-    }
+        .pb-wd-#{$level} {
+            padding-bottom: #{$spacing} !important;
+        }
 
-    .pl-wd-#{$level} {
-      padding-left: #{$spacing} !important;
-    }
+        .pl-wd-#{$level} {
+            padding-left: #{$spacing} !important;
+        }
 
-    .pr-wd-#{$level} {
-      padding-right: #{$spacing} !important;
+        .pr-wd-#{$level} {
+            padding-right: #{$spacing} !important;
+        }
     }
-  }
 }
 
 @for $i from 0 through 200 {
-  @include padding-helper(#{$i}, #{$i * 2}px);
-  @include padding-helper-tablet(#{$i}, #{$i * 2}px);
-  @include padding-helper-desktop(#{$i}, #{$i * 2}px);
+    @include padding-helper(#{$i}, #{$i * 2}px);
+    @include padding-helper-tablet(#{$i}, #{$i * 2}px);
+    @include padding-helper-desktop(#{$i}, #{$i * 2}px);
 }
 
-// grid 
+// grid
 
 .row {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .col {
-  width: 100%;
-
-  &.col-12 {
     width: 100%;
-  }
 
-  &.col-6 {
-    width: 50%;
-  }
-
-  &.col-4 {
-    width: calc(100% / 3);
-  }
-
-  &.col-3 {
-    width: 25%;
-  }
-
-  &.col-2 {
-    width: calc(100% / 6);
-  }
-
-  &.col-1 {
-    width: calc(100% / 12);
-  }
-
-  @include media(">=tablet") {
-    &.col-tb-12 {
-      width: 100%;
+    &.col-12 {
+        width: 100%;
     }
 
-    &.col-tb-6 {
-      width: 50%;
+    &.col-6 {
+        width: 50%;
     }
 
-    &.col-tb-4 {
-      width: calc(100% / 3);
+    &.col-4 {
+        width: calc(100% / 3);
     }
 
-    &.col-tb-3 {
-      width: 25%;
+    &.col-3 {
+        width: 25%;
     }
 
-    &.col-tb-2 {
-      width: calc(100% / 6);
+    &.col-2 {
+        width: calc(100% / 6);
     }
 
-    &.col-tb-1 {
-      width: calc(100% / 12);
-    }
-  }
-
-  @include media(">=desktop") {
-    &.col-lg-12 {
-      width: 100%;
+    &.col-1 {
+        width: calc(100% / 12);
     }
 
-    &.col-lg-6 {
-      width: 50%;
+    @include media('>=tablet') {
+        &.col-tb-12 {
+            width: 100%;
+        }
+
+        &.col-tb-6 {
+            width: 50%;
+        }
+
+        &.col-tb-4 {
+            width: calc(100% / 3);
+        }
+
+        &.col-tb-3 {
+            width: 25%;
+        }
+
+        &.col-tb-2 {
+            width: calc(100% / 6);
+        }
+
+        &.col-tb-1 {
+            width: calc(100% / 12);
+        }
     }
 
-    &.col-lg-4 {
-      width: calc(100% / 3);
-    }
+    @include media('>=desktop') {
+        &.col-lg-12 {
+            width: 100%;
+        }
 
-    &.col-lg-3 {
-      width: 25%;
-    }
+        &.col-lg-6 {
+            width: 50%;
+        }
 
-    &.col-lg-2 {
-      width: calc(100% / 6);
-    }
+        &.col-lg-4 {
+            width: calc(100% / 3);
+        }
 
-    &.col-lg-1 {
-      width: calc(100% / 12);
+        &.col-lg-3 {
+            width: 25%;
+        }
+
+        &.col-lg-2 {
+            width: calc(100% / 6);
+        }
+
+        &.col-lg-1 {
+            width: calc(100% / 12);
+        }
     }
-  }
 }

@@ -1,56 +1,56 @@
 .info-section {
-  padding: 5rem 0;
-  position: relative;
-  z-index: 3;
-  @include media(">=desktop") {
-    padding: 10rem 0;
-  }
-
-  .row {
-    margin: 0 -3rem;
-  }
-  .col {
-    padding: 0 2.95rem 3rem;
-    @include media(">=desktop") {
-      padding: 0 2.95rem 4rem;
+    padding: 5rem 0;
+    position: relative;
+    z-index: 3;
+    @include media('>=desktop') {
+        padding: 10rem 0;
     }
-  }
 
-  .section-title {
-    margin-bottom: 3.2rem;
-  }
-
-  .img {
-    width: 100%;
-    height: 100%;
-    border-radius: 4rem;
-    overflow: hidden;
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .row {
+        margin: 0 -3rem;
     }
-  }
+    .col {
+        padding: 0 2.95rem 3rem;
+        @include media('>=desktop') {
+            padding: 0 2.95rem 4rem;
+        }
+    }
+
+    .section-title {
+        margin-bottom: 3.2rem;
+    }
+
+    .img {
+        width: 100%;
+        height: 100%;
+        border-radius: 4rem;
+        overflow: hidden;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 }
 
 .img-wrap {
-  width: 100%;
-  padding: 2px;
-  background: linear-gradient(95.02deg, #7e4c20 0%, #f8edc9 79.27%);
-  border-radius: 4rem;
-  position: relative;
+    width: 100%;
+    padding: 2px;
+    background: linear-gradient(95.02deg, #7e4c20 0%, #f8edc9 79.27%);
+    border-radius: 4rem;
+    position: relative;
 }
 
 .img-abs {
-  position: absolute;
-  width: 35rem;
-  top: -1.8rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
+    position: absolute;
+    width: 35rem;
+    top: -1.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
 
-  img {
-    width: 100%;
-  }
+    img {
+        width: 100%;
+    }
 }

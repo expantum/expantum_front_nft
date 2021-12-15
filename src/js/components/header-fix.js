@@ -2,21 +2,21 @@ const HEADER = document.querySelector('.js-fixed-header');
 const CLASS_FIXED = 'fixed';
 
 const headerFixed = (() => {
-  const headerFixedInit = () => {
-    if (!HEADER) return;
+    const headerFixedInit = () => {
+        if (!HEADER) return;
 
-    const heightScroll = 1;
-    //const heightScroll = HEADER.offsetTop;
+        const heightScroll = 1;
+        //const heightScroll = HEADER.offsetTop;
 
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset >= heightScroll) {
-        HEADER.classList.add(CLASS_FIXED);
-      } else {
-        HEADER.classList.remove(CLASS_FIXED);
-      }
-    });
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset >= heightScroll) {
+                HEADER.classList.add(CLASS_FIXED);
+            } else {
+                HEADER.classList.remove(CLASS_FIXED);
+            }
+        });
 
-    /*    window.addEventListener('scroll', () => {
+        /*    window.addEventListener('scroll', () => {
       const windowTop = window.pageYOffset
       const width = document.querySelector('body').scrollWidth
 
@@ -36,15 +36,15 @@ const headerFixed = (() => {
         }
       }
     }) */
-  };
+    };
 
-  const init = () => {
-    headerFixedInit();
-  };
+    const init = () => {
+        headerFixedInit();
+    };
 
-  return {
-    init,
-  };
+    return {
+        init,
+    };
 })();
 
 export default headerFixed;

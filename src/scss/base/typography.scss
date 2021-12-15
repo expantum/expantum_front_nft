@@ -1,29 +1,29 @@
 .main-title {
-  font-size: 3rem;
+    font-size: 3rem;
 }
 
 .section-title {
-  font-size: 5rem;
-  background: linear-gradient(90deg, rgb(126, 76, 32), rgb(248, 237, 201) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: $white;
-  line-height: 1;
-  font-weight: 400;
-  margin-bottom: 1.5rem;
-  @include media(">=desktop") {
-    font-size: 6.4rem;
-    margin-bottom: 3.2rem;
-  }
+    font-size: 5rem;
+    background: linear-gradient(90deg, rgb(126, 76, 32), rgb(248, 237, 201) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $white;
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    @include media('>=desktop') {
+        font-size: 6.4rem;
+        margin-bottom: 3.2rem;
+    }
 }
 
 .base-text {
-  display: block;
-  font-size: 2.5rem;
-  color: $white;
-  line-height: 1.17;
-  @include media(">=desktop") {
-    font-size: 2.4rem;
-  }
+    display: block;
+    font-size: 2.5rem;
+    color: $white;
+    line-height: 1.17;
+    @include media('>=desktop') {
+        font-size: 2.4rem;
+    }
 }

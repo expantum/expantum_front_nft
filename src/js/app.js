@@ -8,28 +8,27 @@
 import initSwiper from './components/slider';
 
 const resizeHandler = () => {
-  const htmlWidth = document.documentElement.clientWidth;
+    const htmlWidth = document.documentElement.clientWidth;
 
-  if (htmlWidth < 1024 && htmlWidth >= 320) {
-    document.documentElement.style.fontSize = 10 / (768 / htmlWidth) + "px";
-  }
-  if (htmlWidth >= 1024) {
-    document.documentElement.style.fontSize = 10 / (1440 / htmlWidth) + "px";
-  }
-  AOS.refresh();
+    if (htmlWidth < 1024 && htmlWidth >= 320) {
+        document.documentElement.style.fontSize = 10 / (768 / htmlWidth) + 'px';
+    }
+    if (htmlWidth >= 1024) {
+        document.documentElement.style.fontSize = 10 / (1440 / htmlWidth) + 'px';
+    }
+    AOS.refresh();
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({
+        duration: 1000,
+    });
+    initSwiper();
+    resizeHandler();
 
-document.addEventListener("DOMContentLoaded", () => {
-  AOS.init({
-    duration: 1000,
-  });
-  initSwiper();
-  resizeHandler();
+    var rellax = new Rellax('.rellax', {
+        breakpoints: [320, 768, 1024],
+    });
 
-  var rellax = new Rellax('.rellax', {
-    breakpoints: [320, 768, 1024]
-  });
-
-  window.addEventListener('resize', resizeHandler);
+    window.addEventListener('resize', resizeHandler);
 });

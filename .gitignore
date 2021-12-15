@@ -26,12 +26,12 @@ node_modules/
 
 # markup
 /build/
-#/assets/
+/assets/
 /production/
 .sass-cache
 node_modules
 *.map
-#/*.html
+/*.html
 .tmp
 tmp
 

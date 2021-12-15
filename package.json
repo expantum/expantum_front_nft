@@ -46,6 +46,7 @@
     "htmlhint-stylish": "^1.0.3",
     "imagemin-webp": "^6.0.0",
     "path": "^0.12.7",
+      "prettier": "^2.5.1",
     "vinyl-source-stream": "^2.0.0"
   },
   "engines": {

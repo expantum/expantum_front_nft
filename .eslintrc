@@ -1,18 +1,17 @@
 {
-	"globals": {
-		"jQuery": true,
-		"$": true
-	},
-	"env": {
-		"browser": true,
-		"node": true
-	},
-	"extends": "airbnb-base",
-	"rules": {
-		"no-underscore-dangle": "off",
-		"linebreak-style": [
-			"error",
-			"windows"
-		]
-	}
+    "globals": {
+        "jQuery": true,
+        "$": true
+    },
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "extends": "airbnb-base",
+    "rules": {
+        "no-underscore-dangle": "off",
+        "indent": ["error", 4],
+        "prefer-template": "off",
+        "max-len": "off"
+    }
 }

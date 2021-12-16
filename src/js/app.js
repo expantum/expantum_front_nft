@@ -30,5 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
         breakpoints: [320, 768, 1024],
     });
 
+    // eslint-disable-next-line no-undef
+    window.addEventListener('load', AOS.refresh);
+
     window.addEventListener('resize', resizeHandler);
 });

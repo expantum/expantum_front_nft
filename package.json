@@ -54,7 +54,7 @@
     },
     "scripts": {
         "test": "gulp build",
-        "production": "gulp build",
+        "production": "NODE_ENV=production gulp build",
         "start": "gulp"
     },
     "dependencies": {

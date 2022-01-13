@@ -15,6 +15,9 @@ module.exports = function (options) {
                     prefix: '@@',
                     basepath: `./${options.templates}`,
                     indent: true,
+                    context: {
+                        NODE_ENV: process.env.NODE_ENV || 'development',
+                    },
                 })
             )
             .pipe(gulp.dest(options.dest));

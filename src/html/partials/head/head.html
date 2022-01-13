@@ -13,6 +13,7 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
+    @@if(NODE_ENV === 'production'){
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0F849JDE27"></script>
     <script>
@@ -22,4 +23,5 @@
 
         gtag('config', 'G-0F849JDE27');
     </script>
+    }
 </head>

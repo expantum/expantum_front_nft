@@ -2,7 +2,7 @@ import { abi } from './abi-mint';
 const infuraId = 'f9c604b0fdfe48e1b6e040eb05ba75ec';
 const contractAddress = '0xEdc7Fb3b31c56Eb283289833BA62486EADb0AAdE';
 const chainId = 1;
-const maxNft = 1;
+const maxNft = 4;
 
 const mintModalScript = () => {
     const Web3Modal = window.Web3Modal.default;

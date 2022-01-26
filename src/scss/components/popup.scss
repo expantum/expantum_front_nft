@@ -1,83 +1,179 @@
 .overlay {
-    //opacity: 0;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 9;
-    //z-index: -1;
-    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.7);
     transition: opacity 0.5s ease;
     display: none;
+    width: 100%;
+    height: 100%;
+
     &.active {
-        display: flex !important;
-        /*  z-index: 9;
-    opacity: 1;
-    transition: opacity 0.5s ease; */
+        display: block;
+        animation: fadeIn 0.5s ease forwards;
     }
 }
+
 .popup {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -45%);
-    //z-index: -3;
-    z-index: 99;
-    padding: 0 15px;
-    width: 100%;
-    max-width: 320px;
-    //opacity: 0;
+    transform: translate(-50%, -50%);
+    z-index: 21;
+    padding: 0 1rem;
     transition: opacity 0.5s ease;
     display: none;
-
-    @include media('>=tablet') {
-        max-width: 590px;
-    }
+    max-height: calc(100vh - 1rem);
 
     &.active {
         display: block;
-        //opacity: 1;
-        z-index: 99;
-        //transform: translate(-50%, -45%);
-        transition: opacity 0.5s ease;
+        animation: fadeIn 1s ease forwards;
     }
-    &__wrap {
-        background-color: $white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        padding: 30px;
-        min-height: 220px;
-        @include media('>=tablet') {
-            min-height: 380px;
-        }
-    }
+
     &__close {
         position: absolute;
-        right: 39px;
-        top: 13px;
+        right: 4rem;
+        top: 2rem;
         z-index: 999;
-        @include media('>=tablet') {
-            right: 49px;
-            top: 23px;
+        width: 5rem;
+        height: 5rem;
+        background-image: url('../images/close.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+.video-popup {
+    width: 100%;
+    @include media('>=desktop') {
+        width: 100rem;
+    }
+}
+
+.mint-popup {
+    width: 330px;
+    // height: 168px;
+
+    .popup__wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../images/modal_register_bg.webp') center center no-repeat;
+        background-size: contain;
+        text-align: center;
+
+        .wings-img {
+            width: 60%;
+            margin-top: 10px;
         }
-        &:before,
-        &:after {
-            position: absolute;
-            left: 0;
-            content: ' ';
-            height: 20px;
-            width: 2px;
-            background-color: #333;
+    }
+
+    .popup__content {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        padding: 0 20px;
+        padding-top: 18%;
+
+        .email-input-group {
+            margin-bottom: 1%;
         }
-        &:before {
-            transform: rotate(45deg);
+
+        .btn {
+            // transform: scale(0.4);
         }
-        &:after {
-            transform: rotate(-45deg);
+
+        .email-input-group {
+            .btn {
+                transform: scale(0.56);
+            }
         }
+
+        .form {
+            display: block;
+        }
+
+        .form__group {
+            .form__error-text {
+                display: none;
+
+                .error {
+                    color: #ff0000;
+                    font-size: 12px;
+                    text-shadow: 0 0 3px #fff;
+                }
+            }
+
+            &.has-error {
+                .form__error-text {
+                    display: block;
+                }
+            }
+        }
+
+        .success-message {
+            display: none;
+            color: #fff;
+            font-size: 3.2rem;
+            line-height: 1;
+        }
+
+        &.success {
+            .form {
+                display: none;
+            }
+
+            .success-message {
+                display: block;
+            }
+        }
+
+        @include media('>=desktop') {
+            padding: 0;
+            padding-top: 20%;
+
+            .form {
+                margin-top: 6%;
+            }
+
+            .email-input-group {
+                margin-bottom: 120px;
+            }
+
+            .btn {
+                transform: scale(1);
+            }
+
+            .email-input-group {
+                .btn {
+                    transform: scale(2);
+                }
+            }
+
+            .success-message {
+                font-size: 5rem;
+            }
+        }
+    }
+    @include media('>=desktop') {
+        // width: 1000px;
+        // height: 560px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

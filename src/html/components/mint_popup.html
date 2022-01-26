@@ -1,0 +1,74 @@
+<div class="overlay js-overlay"></div>
+<div class="popup new-popup mint-popup js-popup" data-popup="mint-popup">
+    <div class="popup__wrap">
+        <div id="registration-form" class="popup__content">
+            <h2 class="section-title mint-modal">Mint</h2>
+            <p class="popup__text">0.13 Eth + Gas fee <br />Max 4 Expantum per transaction</p>
+            <form action="#" class="popup__form">
+                <div class="controls">
+                    <div class="counter">
+                        <div class="counter__minus">-</div>
+                        <input class="counter__field" value="1" />
+                        <div class="counter__plus">+</div>
+                    </div>
+                    <div class="mint-numbers_wrap_block">
+                        <div class="mint-set-number-btn mint__number__wrap" data-value="2">
+                            <div class="mint__number__black">
+                                <div class="mint__number">2</div>
+                            </div>
+                        </div>
+                        <div class="mint-set-number-btn mint__number__wrap" data-value="3">
+                            <div class="mint__number__black">
+                                <div class="mint__number">3</div>
+                            </div>
+                        </div>
+                        <div class="mint-set-number-btn mint__number__wrap" data-value="4">
+                            <div class="mint__number__black">
+                                <div class="mint__number">MAX</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="heroes-register" class="btn primary arrow btn-popup">
+                    <button
+                        style="display: 'flex'"
+                        id="connect__button"
+                        type="button"
+                        data-trigger="mint-popup"
+                        class="btn primary js-show-popup btn-popup"
+                        data-aos="fade-right"
+                        data-aos-offset="0"
+                        data-aos-delay="300"
+                    >
+                        Connect
+                    </button>
+                    <button
+                        style="display: none"
+                        id="mint__button"
+                        type="button"
+                        data-trigger="mint-popup"
+                        class="btn primary js-show-popup btn-popup"
+                        data-aos="fade-right"
+                        data-aos-offset="0"
+                        data-aos-delay="300"
+                    >
+                        Mint
+                    </button>
+                    <button
+                        style="display: none"
+                        disabled="true"
+                        id="mint__button__isPaused"
+                        type="button"
+                        data-trigger="mint-popup"
+                        class="btn primary js-show-popup btn-popup"
+                        data-aos="fade-right"
+                        data-aos-offset="0"
+                        data-aos-delay="300"
+                    >
+                        Paused
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

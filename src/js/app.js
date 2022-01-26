@@ -6,6 +6,8 @@
 //import Accordion from './components/accordion';
 
 import initSwiper from './components/slider';
+import popupsFunc from './components/popup';
+import mintModalScript from './mint';
 
 const resizeHandler = () => {
     const htmlWidth = document.documentElement.clientWidth;
@@ -20,11 +22,16 @@ const resizeHandler = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+    const currentYear = new Date().getFullYear();
+    document.querySelectorAll('.current-year').forEach((node) => (node.innerHTML = currentYear));
+
     AOS.init({
         duration: 1000,
     });
     initSwiper();
     resizeHandler();
+    popupsFunc();
+    mintModalScript();
 
     var rellax = new Rellax('.rellax', {
         breakpoints: [320, 768, 1024],

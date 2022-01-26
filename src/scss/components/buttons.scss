@@ -6,6 +6,9 @@
     height: 6.9rem;
     position: relative;
     flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include media('>=desktop') {
         width: 31.5rem;

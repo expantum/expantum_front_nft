@@ -17,6 +17,7 @@ module.exports = function (options) {
                     indent: true,
                     context: {
                         NODE_ENV: process.env.NODE_ENV || 'development',
+                        BUILD_VERSION: Date.now().toString(16).substr(-6),
                     },
                 })
             )
